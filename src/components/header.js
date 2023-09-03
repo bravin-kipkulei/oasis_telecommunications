@@ -27,7 +27,7 @@ const createHeader = () => {
                 <a class="nav-link" href="/services">Services</a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link" href="/contacts">Contact</a>
+                <a class="nav-link" href="/contact">Contact</a>
               </li>
             </ul>
             <!-- Login/Sign up -->
