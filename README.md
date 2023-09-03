@@ -58,7 +58,7 @@ The project encompasses the development of both admin and client panels, includi
 
 ### Running the Project
 1. In the project directory, start the development server: `npm run dev`
-2. Access the application in your browser at: `http://localhost:3000`
+2. Access the application in your browser at: `http://localhost:5173`
 
 ## 3. Features and Components
 
