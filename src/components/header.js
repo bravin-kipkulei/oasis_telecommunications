@@ -32,7 +32,7 @@ const createHeader = () => {
             </ul>
             <!-- Login/Sign up -->
             <div class="d-flex flex-column  flex-lg-row justify-content-center align-items-center gap-3">
-              <a href="/myAccount" id="myAccount" class="text-decoration-none px-3 py-1 "> Selfcare</a>
+            <a href="/myaccount" id="myAccount" class="text-decoration-none px-3 py-1 nav-link">Selfcare</a>
             </div>
           </div>
         </div>

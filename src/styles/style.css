@@ -6,7 +6,11 @@ body {
     min-height: 100vh; /* Added */
     overflow: auto; /* Added */
   }
-
+  .card {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
 
 
 

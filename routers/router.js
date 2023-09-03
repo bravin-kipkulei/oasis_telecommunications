@@ -13,6 +13,7 @@ const loadRoutes = async () => {
   routes.set('/about', pages.about);
   routes.set('/services', pages.services);
   routes.set('/contact', pages.contact);
+  routes.set('/myaccount', pages.myaccount);
 };
 
 const handle404 = () => {

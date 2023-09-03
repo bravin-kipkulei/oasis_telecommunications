@@ -15,6 +15,7 @@ export const loadAllPages = async () => {
   pages.about = await loadPage('views/about.html');
   pages.services = await loadPage('views/services.html');
   pages.contact = await loadPage('views/contact.html');
+  pages.myaccount = await loadPage('views/myaccount.html');
 
   return pages;
 };
