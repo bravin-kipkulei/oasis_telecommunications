@@ -1,17 +1,20 @@
-// pageLoader.js 
+// pageLoader.js
 
 export const loadPage = async (page) => {
-    const response = await fetch(page);
-    return response.text(); 
-  };
-  
-  export const loadAllPages = async () => {
-    const pages = {};
-    
-    pages.home = await loadPage('index.html');
-    pages.about = await loadPage('about.html');
-    pages.services = await loadPage('services.html'); 
-    pages.contact = await loadPage('contact.html');
-  
-    return pages;
-  };
+  const response = await fetch(page);
+  return response.text();
+};
+
+export const loadAllPages = async () => {
+  const pages = {};
+
+  // Load index.html from the root directory
+  pages.home = await loadPage('index.html');
+
+  // Load other pages from the 'views' directory
+  pages.about = await loadPage('views/about.html');
+  pages.services = await loadPage('views/services.html');
+  pages.contact = await loadPage('views/contact.html');
+
+  return pages;
+};

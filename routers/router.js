@@ -1,43 +1,71 @@
 // router.js
-import { loadAllPages } from './pageLoader';
-import { pushState, replaceState, onPopState, onPushState } from './history';
 
+import { loadAllPages } from './pageLoader';
+import { onPopState, pushState } from './history'; // Import history-related functions
 
 const routes = new Map();
-routes.set('default', `<h1>404 Not Found</h1>`);
 
 const loadRoutes = async () => {
-    const pages = await loadAllPages();
-    routes.set('/', pages.home);
-    routes.set('/about', pages.about);
-    routes.set('/services', pages.services);
-    routes.set('/contact', pages.contact);
-  };
+  // Load your routes here
+  // For example, you can load pages from loadAllPages()
+  const pages = await loadAllPages();
+  routes.set('/', pages.home);
+  routes.set('/about', pages.about);
+  routes.set('/services', pages.services);
+  routes.set('/contact', pages.contact);
+};
+
+const handle404 = () => {
+  const root = document.getElementById('root');
+  root.innerHTML = `<div class="container monochrome-theme">
+  <div class="row">
+      <div class="col-md-12">
+          <div class="error-template text-center">
+              <h1>Oops!</h1>
+              <h2>404 Not Found</h2>
+              <div class="error-details">
+                  Sorry, an error has occurred, Requested page not found!
+              </div>
+              <div class="error-actions">
+                  <a href="/" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span>
+                      Take Me Home </a><a href="nav-link" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-envelope"></span> Contact Support </a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+`;
+};
 
 // Define and export onNavClick handler
 export const onNavClick = async (pathname) => {
-    const root = document.getElementById('root');
-    const pageContent = routes.get(pathname) || routes.get('default');
-  
-    // Set the root's innerHTML with the page content
-    root.innerHTML = pageContent;
+  const root = document.getElementById('root');
 
-    // Update the URL in the address bar
-    window.history.pushState({}, pathname, window.location.origin + pathname);
-  };
+  if (!routes.has(pathname)) {
+    handle404();
+    return;
+  }
+
+  const pageContent = routes.get(pathname);
+  root.innerHTML = pageContent;
+
+  // Update the URL using the pushState function from history
+  pushState({}, '', pathname);
+};
+
+const handleRouting = () => {
+  const pathname = window.location.pathname;
+  onNavClick(pathname);
+};
 
 const router = async () => {
-    await loadRoutes();
-  
-    const root = document.getElementById('root');
-  
-    root.addEventListener('click', async (e) => {
-      if (e.target.matches('a.nav-link')) {
-        e.preventDefault();
-        const pathname = e.target.getAttribute('href');
-        await onNavClick(pathname);
-      }
-    });
-  };
-  
-  router();
+  await loadRoutes();
+
+  // Set up routing
+  window.addEventListener('popstate', handleRouting);
+
+  // Trigger initial routing
+  handleRouting();
+};
+
+router();
