@@ -28,7 +28,7 @@ const createFooter = () => {
                   <ul class="list-unstyled nav-links">
                     <li><a href="#">Installation</a></li>
                     <li><a href="#">Business Connectivity</a></li>
-                    <li><a href="#">Awards</a></li>
+                    <li><a href="#">IoT (Internet of Things)</a></li>
                     
                   </ul>
                 </div>
