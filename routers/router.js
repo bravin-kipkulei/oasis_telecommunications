@@ -1,5 +1,7 @@
 // router.js
 import { loadAllPages } from './pageLoader';
+import { pushState, replaceState, onPopState, onPushState } from './history';
+
 
 const routes = new Map();
 routes.set('default', `<h1>404 Not Found</h1>`);
@@ -19,6 +21,9 @@ export const onNavClick = async (pathname) => {
   
     // Set the root's innerHTML with the page content
     root.innerHTML = pageContent;
+
+    // Update the URL in the address bar
+    window.history.pushState({}, pathname, window.location.origin + pathname);
   };
 
 const router = async () => {

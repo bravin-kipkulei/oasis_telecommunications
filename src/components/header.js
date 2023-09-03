@@ -6,7 +6,7 @@ const createHeader = () => {
   header.innerHTML = `
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand fs-4" href="#">OASIS</a>
+        <a class="navbar-brand nav-link fs-4" href="/">OASIS</a>
         <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

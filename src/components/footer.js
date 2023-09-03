@@ -10,9 +10,8 @@ const createFooter = () => {
                 <div class="col-sm-6 col-md mb-4 mb-md-0">
                   <h3>Discover</h3>
                   <ul class="list-unstyled nav-links">
-                    <li><a href="#">Website editors</a></li>
-                    <li><a href="#">Online retail</a></li>
-                    <li><a href="#">Get started</a></li>
+                    <li><a href="#">Explore Our Network</a></li>
+                    <li><a href="#">Technology Advancements</a></li>
                     <li><a href="#">Services</a></li>
                   </ul>
                 </div>
@@ -27,8 +26,8 @@ const createFooter = () => {
                 <div class="col-sm-6 col-md mb-4 mb-md-0">
                   <h3>Services</h3>
                   <ul class="list-unstyled nav-links">
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">News</a></li>
+                    <li><a href="#">Installation</a></li>
+                    <li><a href="#">Business Connectivity</a></li>
                     <li><a href="#">Awards</a></li>
                     
                   </ul>
