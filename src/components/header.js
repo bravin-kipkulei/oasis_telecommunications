@@ -16,16 +16,16 @@ const createHeader = () => {
         <div class="offcanvas-body d-flex flex-lg-row flex-column p-4 p-lg-0"> 
           <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/">Home</a>
+              <a class="nav-link" aria-current="page" href="#" onclick="onNavClick('/'); return false;">Home</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="nav-link" href="/about">About</a>
+              <a class="nav-link" href="#" onclick="onNavClick('/about'); return false;">About</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="nav-link" href="/services">Services</a>
+              <a class="nav-link" href="#" onclick="onNavClick('/services'); return false;">Services</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="nav-link" href="/contacts">Contact</a>
+              <a class="nav-link" href="#" onclick="onNavClick('/contacts'); return false;">Contact</a>
             </li>
       
           </ul>
