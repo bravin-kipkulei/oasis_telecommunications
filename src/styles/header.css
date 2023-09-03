@@ -1,0 +1,13 @@
+
+@media(max-width: 991px){
+.sidebar{
+background-color:  rgba(255, 255, 255, 0.15);
+backdrop-filter: blur(10px);
+}
+}
+
+#myAccount{
+  background-color: #800f2f;
+  color: white;
+  border-radius: 10px;
+}
