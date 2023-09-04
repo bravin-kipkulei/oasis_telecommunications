@@ -51,6 +51,14 @@ export const onNavClick = async (pathname) => {
   const pageContent = routes.get(pathname);
   root.innerHTML = pageContent;
 
+  // Hide the "Selfcare" link when on the "/signUp" or "/login" pages
+  const myAccountLink = document.getElementById('myAccount');
+  if (pathname === '/signUp' || pathname === '/login') {
+    myAccountLink.style.display = 'none';
+  } else {
+    myAccountLink.style.display = 'block';
+  }
+
   // Update the URL using the pushState function from history
   pushState({}, '', pathname);
 };
