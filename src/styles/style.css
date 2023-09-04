@@ -12,6 +12,31 @@ body {
     box-shadow: none;
   }
 
+ /* Custom CSS */
+.custom-btn-style {
+  background-color: #212529; /* Sign Up button background color */
+  color: #fff !important; /* Text color (important to override Bootstrap styles) */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+
+.custom-btn-style:hover {
+  background-color: #212529; /* Hover background color */
+  color: #fff !important; /* Hover text color (important to override Bootstrap styles) */
+}
+
+.custom-btn-style-shadow {
+  background-color: #ced4da; /* Sign In button background color */
+  color: #212529 !important; /* Text color (important to override Bootstrap styles) */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+
+.custom-btn-style-shadow:hover {
+  background-color: #ced4da; /* Hover background color */
+  color: #212529 !important; /* Hover text color (important to override Bootstrap styles) */
+}
+
+
 
 
 
