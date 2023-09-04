@@ -15,6 +15,7 @@ const loadRoutes = async () => {
   routes.set('/contact', pages.contact);
   routes.set('/myaccount', pages.myaccount);
   routes.set('/signUp', pages.signUp);
+  routes.set('/login', pages.login);
 };
 
 const handle404 = () => {
@@ -53,7 +54,7 @@ export const onNavClick = async (pathname) => {
 
   // Hide the "Selfcare" link when on the "/signUp" or "/login" pages
   const myAccountLink = document.getElementById('myAccount');
-  if (pathname === '/signUp' || pathname === '/login') {
+  if (pathname === '/signUp' || pathname === '/login' || pathname === '/myaccount') {
     myAccountLink.style.display = 'none';
   } else {
     myAccountLink.style.display = 'block';

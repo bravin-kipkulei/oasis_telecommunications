@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/oasis logo.svg" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/src/styles/style.css" />
+    <title>myaccount</title>
+</head>
+
+<body class="">
+    <div id="header"></div>
+
+    <div id="root">
+        <main class="py-3">
+            <div class="container"></div>
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="mt-0 card-title border-bottom text-dark">
+                                    Sign In
+                                </h4>
+
+                                <form method="POST" action="">
+                                    <input type="hidden" name="_token"
+                                        value="s2fAL4vmhS8ivWPMnWc9C2hGl2s5v8EM3f3WFr9U" />
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <input id="email" type="email" placeholder="Email Address"
+                                                class="form-control" name="email" value="" required autocomplete="email"
+                                                autofocus />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <input id="password" type="password" placeholder="Password"
+                                                class="form-control" name="password" required
+                                                autocomplete="current-password" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="remember"
+                                                    id="remember" />
+
+                                                <label class="form-check-label" for="remember">
+                                                    Remember Me
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mb-0">
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn btn-primary">
+                                                Login
+                                            </button>
+
+                                            <a class="btn btn-link" href="">
+                                                Forgot Your Password?
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="footer"></div>
+</body>
+
+</html>
