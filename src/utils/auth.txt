@@ -1,0 +1,5 @@
+https://firebase.google.com/docs/auth/web/password-auth?hl=en&authuser=0
+
+onAuthStateChanged is called when the user is signed in or out. You can use this to update your UI. 
+https://firebase.google.com/docs/auth/web/manage-users?hl=en&authuser=0#listen_for_state_changes
+
