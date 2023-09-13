@@ -1,15 +1,17 @@
-// vite.config.js
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
+import path from 'path'
+
+// Get absolute path to views
+const absoluteViews = path.resolve(__dirname, 'views')
 
 export default defineConfig({
   build: {
-    outDir: 'dist',
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        views: resolve(__dirname, 'views') 
+        views: absoluteViews 
       }
-    }
+    } 
   }
 })
