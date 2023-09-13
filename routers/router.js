@@ -16,10 +16,11 @@ const loadRoutes = async () => {
   routes.set('/myaccount', pages.myaccount);
   routes.set('/signUp', pages.signUp);
   routes.set('/login', pages.login);
+  routes.set('/error404', pages.error404);
 };
 
 const handle404 = () => {
-  const root = document.getElementById('root');
+  const root = document.getElementById('hero');
   root.innerHTML = `<div class="container monochrome-theme">
   <div class="row">
       <div class="col-md-12">
@@ -42,7 +43,7 @@ const handle404 = () => {
 
 // Define and export onNavClick handler
 export const onNavClick = async (pathname) => {
-  const root = document.getElementById('root');
+  const root = document.getElementById('hero');
 
   if (!routes.has(pathname)) {
     handle404();
