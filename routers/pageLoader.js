@@ -20,7 +20,6 @@ export const loadAllPages = async () => {
   pages.myaccount = await loadPage('views/myaccount.html');
   pages.signUp = await loadPage('views/signUp.html');
   pages.login = await loadPage('views/login.html');
-  pages.error404 = await loadPage('views/error404.html');
   return pages;
 };
 
