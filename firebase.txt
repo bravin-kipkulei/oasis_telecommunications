@@ -1,0 +1,6 @@
+-authentication:
+-realtime database
+-firebase hosting
+firebase storage
+firebase payment gateway integration (daraja api)
+firebase routing (server side url routing)
