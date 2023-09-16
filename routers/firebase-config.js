@@ -6,12 +6,13 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBE4dVJEV5q7oOqalW-6qTU6CcURbhqcEo",
-  authDomain: "oasis-test-development.firebaseapp.com",
-  projectId: "oasis-test-development",
-  storageBucket: "oasis-test-development.appspot.com",
-  messagingSenderId: "701934322502",
-  appId: "1:701934322502:web:8bcaee5b26134f1d6b9b47"
+  apiKey: "AIzaSyB6v7ZybUQe_Ywj2hyFKRmU_cfwlzJlV1w",
+  authDomain: "oasis-telecom.firebaseapp.com",
+  databaseURL: "https://oasis-telecom-default-rtdb.firebaseio.com",
+  projectId: "oasis-telecom",
+  storageBucket: "oasis-telecom.appspot.com",
+  messagingSenderId: "721689200142",
+  appId: "1:721689200142:web:c853b8e48304903e22de5f"
 };
 
 // Initialize Firebase
