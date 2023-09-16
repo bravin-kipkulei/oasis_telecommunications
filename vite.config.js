@@ -1,7 +1,15 @@
 // vite.config.js
-export default {
-    build: {
-      outDir: 'dist', // Set this to your Vite build output directory
+import { resolve } from 'path'
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        views: resolve(__dirname, 'views/about.html'),
+      },
     },
-  };
+  },
+})
   
