@@ -32,7 +32,7 @@ const createHeader = () => {
             </ul>
             <!-- Login/Sign up -->
             <div class="d-flex flex-column  flex-lg-row justify-content-center align-items-center gap-3">
-            <a href="/myaccount" id="myAccount" class="text-decoration-none px-3 py-1 nav-link">Selfcare</a>
+              <a href="/myaccount" id="myAccount" class="text-decoration-none px-3 py-1 nav-link">Selfcare</a>
             </div>
           </div>
         </div>
@@ -40,17 +40,31 @@ const createHeader = () => {
     </nav>
   `;
 
+  // Function to close the offcanvas menu
+  function closeOffcanvasMenu() {
+    const offcanvasNavbar = document.getElementById('offcanvasNavbar');
+    const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasNavbar);
+    if (offcanvas) {
+      offcanvas.hide();
+    }
+  }
+
   // Add click event listeners to the navigation links
   const navLinks = header.querySelectorAll('a.nav-link');
   navLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
+      // Close the offcanvas menu when a navigation link is clicked on mobile screens
+      if (window.innerWidth <= 991) {
+        closeOffcanvasMenu();
+      }
+
       e.preventDefault(); // Prevent the default link behavior
       const pathname = link.getAttribute('href');
       onNavClick(pathname); // Call onNavClick function
 
-       // Log the class name of the clicked element
-       console.log(`Clicked element class name: ${link.className}`)
-       console.log(`Clicked element href content: ${pathname}`);
+      // Log the class name of the clicked element
+      console.log(`Clicked element class name: ${link.className}`)
+      console.log(`Clicked element href content: ${pathname}`);
     });
   });
 
