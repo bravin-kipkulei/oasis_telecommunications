@@ -25,5 +25,23 @@ const firebaseConfig = {
   const auth = getAuth();
   const database = getDatabase(app);
 
-  console.log("Hello world");
+// Get references to the form elements
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const usernameInput = document.getElementById('username');
+
+// Get reference to the signup button
+const signupBtn = document.getElementById('signup-btn');
+
+//console message when btn is clicked
+signupBtn.addEventListener('click', () => {
+
+  console.log('Signup button clicked');
+
+}
+
+);
+
+// Add click event listener to the signup button. console message
+
 
