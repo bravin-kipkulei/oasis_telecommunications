@@ -12,7 +12,7 @@ import * as bootstrap from 'bootstrap';
 
 const footerContent = document.getElementById('footer');
 const headerContent = document.getElementById('header');
-//const homepageContent = document.getElementById('homepage'); // Correct the ID
+//const homepageContent = document.getElementById('homepage');
 
 // Create and insert the header component
 createHeader(headerContent);

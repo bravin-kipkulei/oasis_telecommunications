@@ -25,36 +25,5 @@ const firebaseConfig = {
   const auth = getAuth();
   const database = getDatabase(app);
 
-    submit_signup.addEventListener("click", (e) => {
-let email = document.getElementById("email").value;
-let password = document.getElementById("password").value;
-let username = document.getElementById("username").value;
-
-        createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    console.log(user);
-    set(ref(database, 'users/' + user.uid), {
-      email: email,
-      username: username,
-      password: password
-  }).then(() => {
-      console.log('Data written successfully');
-  }).catch((error) => {
-      console.error('Error writing data:', error);
-  });
-
-
-    alert("Account created successfully");
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    alert(errorMessage);
-    // ..
-  });
-    });
-
   console.log("Hello world");
+

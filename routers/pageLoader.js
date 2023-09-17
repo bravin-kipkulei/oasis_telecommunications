@@ -2,12 +2,10 @@
 
 export const loadPage = async (page) => {
   const response = await fetch(page);
-  console.log(`Loaded ${page}`);
   return response.text();
 };
 
 export const loadAllPages = async () => {
-  console.log('Loading all pages...');
   const pages = {};
 
   // Load index.html from the root directory
