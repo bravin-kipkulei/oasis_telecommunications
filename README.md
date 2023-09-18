@@ -1,4 +1,4 @@
-# oasis_telecommunicatios
+# oasis_telecommunications
 
 ## Table of Contents
 
