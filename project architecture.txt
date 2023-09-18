@@ -1,0 +1,41 @@
+oasis-telecommunications
+├── node_modules
+├── public
+├── routers
+├── src
+│   ├── assets
+│   ├── components
+│   │   ├── header.js
+│   │   ├── footer.js
+│   │   ├── logoutbtn.js
+│   │   └── homepage.js
+│   ├── styles
+│   │   ├── footer.css
+│   │   ├── header.css
+│   │   └── style.css
+│   ├── utils
+│   │   ├── authLogin.js
+│   │   ├── authSignUp.js
+│   │   ├── signout.js
+│   │   └── checkauthstate.js
+│   └── views
+│       ├── admin
+│       │   ├── about.js
+│       │   ├── contactUs.js
+│       │   ├── error404.js
+│       │   ├── homepage.js
+│       │   ├── login.js
+│       │   ├── myaccount.js
+│       │   ├── services.js
+│       │   └── signUp.js
+│       └── client
+│           ├── about.js
+│           ├── contactUs.js
+│           ├── error404.js
+│           ├── homepage.js
+│           ├── login.js
+│           ├── myaccount.js
+│           ├── services.js
+│           └── signUp.js
+├── index.html
+└── main.js
