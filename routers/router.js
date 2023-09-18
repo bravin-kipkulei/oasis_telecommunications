@@ -7,11 +7,10 @@ const routes = new Map();
 
 const loadRoutes = async () => {
   // Load your routes here
-  // For example, you can load pages from loadAllPages()
   const pages = await loadAllPages();
   routes.set('/', pages.home);
   routes.set('/about', pages.about);
-  routes.set('/services', pages.services); // Use the rendered service page
+  routes.set('/services', pages.services);
   routes.set('/contact', pages.contact);
   routes.set('/myaccount', pages.myaccount);
   routes.set('/signUp', pages.signUp);
