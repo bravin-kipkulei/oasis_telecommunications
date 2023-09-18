@@ -11,7 +11,7 @@ const loadRoutes = async () => {
   const pages = await loadAllPages();
   routes.set('/', pages.home);
   routes.set('/about', pages.about);
-  routes.set('/services', pages.services);
+  routes.set('/services', pages.services); // Use the rendered service page
   routes.set('/contact', pages.contact);
   routes.set('/myaccount', pages.myaccount);
   routes.set('/signUp', pages.signUp);
@@ -50,21 +50,24 @@ export const onNavClick = async (pathname) => {
   }
 
   const pageContent = routes.get(pathname);
-  root.innerHTML = pageContent;
+
+  // Convert the HTML element to a string using outerHTML
+  root.innerHTML = pageContent.outerHTML;
 
   // Hide the "Selfcare" link when on the "/signUp" or "/login" pages
   const myAccountLink = document.getElementById('myAccount');
-if (myAccountLink) {
-  if (pathname === '/signUp' || pathname === '/login' || pathname === '/myaccount') {
-    myAccountLink.style.display = 'none';
-  } else {
-    myAccountLink.style.display = 'block';
+  if (myAccountLink) {
+    if (pathname === '/signUp' || pathname === '/login' || pathname === '/myaccount') {
+      myAccountLink.style.display = 'none';
+    } else {
+      myAccountLink.style.display = 'block';
+    }
   }
-}
 
   // Update the URL using the pushState function from history
   pushState({}, '', pathname);
 };
+
 
 const handleRouting = () => {
   const pathname = window.location.pathname;
