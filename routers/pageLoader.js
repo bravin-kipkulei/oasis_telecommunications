@@ -1,6 +1,12 @@
 // pageLoader.js
 
-import { render as servicesRender } from '../views/services'; // Import the render function from services.js
+import { render as servicesRender } from '../views/services';
+import { render as aboutRender } from '../views/about';
+import { render as contactUsRender } from '../views/contactUs';
+import { render as myaccountRender } from '../views/myaccount';
+import { render as signUpRender } from '../views/signUp';
+import { render as loginRender } from '../views/login';
+
 
 export const loadPage = async (page) => {
   const response = await fetch(page);
@@ -14,13 +20,12 @@ export const loadAllPages = async () => {
   pages.home = await loadPage('index.html');
 
   // Load other pages from the 'views' directory
-  pages.about = await loadPage('views/about.html');
-  // Use the render function from services.js for the services page
+  pages.about = aboutRender();
   pages.services = servicesRender();
-  pages.contact = await loadPage('views/contact.html');
-  pages.myaccount = await loadPage('views/myaccount.html');
-  pages.signUp = await loadPage('views/signUp.html');
-  pages.login = await loadPage('views/login.html');
+  pages.contact = contactUsRender();
+  pages.myaccount = myaccountRender();
+  pages.signUp = signUpRender();
+  pages.login = loginRender();
   
   return pages;
 };

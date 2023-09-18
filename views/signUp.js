@@ -1,4 +1,8 @@
-<link rel="stylesheet" href="/src/styles/style.css">
+//contact us page view
+export const render = () => {
+    const div = document.createElement('div');
+    div.innerHTML = `
+    <link rel="stylesheet" href="/src/styles/style.css">
     <div id="root">
         <main class="py-3">
             <div class="container">
@@ -70,3 +74,9 @@
         </main>
     </div>
     <script type="module" src="./authSignUp.js"></script>
+
+    `;
+    
+    return div;
+  };
+

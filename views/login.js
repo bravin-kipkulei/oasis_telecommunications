@@ -1,4 +1,8 @@
-<link rel="stylesheet" href="/src/styles/style.css">
+//login page view
+export const render = () => {
+    const div = document.createElement('div');
+    div.innerHTML = `
+    <link rel="stylesheet" href="/src/styles/style.css">
 <div id="root">
         <main class="py-3">
             <div class="container"></div>
@@ -59,4 +63,9 @@
             </div>
         </main>
     </div>
+  
+    `;
+    
+    return div;
+  };
 
