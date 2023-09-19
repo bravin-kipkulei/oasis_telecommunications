@@ -15,6 +15,9 @@ const loadRoutes = async () => {
   routes.set('/myaccount', pages.myaccount);
   routes.set('/signUp', pages.signUp);
   routes.set('/login', pages.login);
+  routes.set('/user-dashboard', pages.userDashboard);
+  routes.set('/invoice', pages.invoice);
+  routes.set('/homepage', pages.homepage);
 };
 
 const handle404 = () => {
