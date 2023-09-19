@@ -1,5 +1,5 @@
 // pageLoader.js
-
+import { render as homeRender } from '../views/home';
 import { render as servicesRender } from '../views/services';
 import { render as aboutRender } from '../views/about';
 import { render as contactUsRender } from '../views/contactUs';
@@ -20,6 +20,7 @@ export const loadAllPages = async () => {
   pages.home = await loadPage('index.html');
 
   // Load other pages from the 'views' directory
+  pages.home = homeRender();
   pages.about = aboutRender();
   pages.services = servicesRender();
   pages.contact = contactUsRender();
