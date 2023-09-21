@@ -18,6 +18,10 @@ const loadRoutes = async () => {
   routes.set('/user-dashboard', pages.userDashboard);
   routes.set('/invoice', pages.invoice);
   routes.set('/homepage', pages.homepage);
+  routes.set('/statement', pages.statement);
+  routes.set('/dashboard', pages.dashboard);
+  routes.set('/profile', pages.profile);
+  
 };
 
 const handle404 = () => {

@@ -7,12 +7,16 @@ import { render as myaccountRender } from '../views/myaccount';
 import { render as signUpRender } from '../views/signUp';
 import { render as loginRender } from '../views/login';
 import { render as  homepageRender } from   '../views/homePage';
+import { render as  dashboardRender } from   '../views/client/dashborad';
+import { render as  profileRender } from   '../views/client/profile';
+
+
 
 
 // 
 import { render as userdashboardRender } from '../views/client/accountDashboard';
 import { render as  userinvoiceRender }  from '../views/client/invoice';
-
+import { render as  statementRender } from   '../views/client/statement';
 
 
 
@@ -36,12 +40,16 @@ export const loadAllPages = async () => {
   pages.signUp = signUpRender();
   pages.login = loginRender();
   pages.homepage = homepageRender();
+  pages.statement = statementRender();
+  pages.statement = profileRender();
   
 
 
   // load pages from client directory
   pages.userDashboard = userdashboardRender();
   pages.invoice = userinvoiceRender();
+  pages.dashboard = dashboardRender();
+  pages.profile = profileRender()
 
 
   return pages;
